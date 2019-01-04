@@ -20,6 +20,7 @@ class QuizList extends React.Component {
 
   componentDidMount() {
     this.props.clearQuiz();
+    window.scrollTo(0, 0);
   }
 
   handleFilterChange = ({ target: { name, value } }) => {

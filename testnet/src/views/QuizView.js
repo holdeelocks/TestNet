@@ -1,13 +1,7 @@
 import React from "react";
 import NavBar from "../components/NavBar";
 import QuizRoutes from "../components/Quiz/Routes";
-import {
-  getQuizzes,
-  getTopics,
-  logout,
-  clearQuiz,
-  toggleAuthForm
-} from "../store/actions";
+import { getQuizzes, getTopics, logout, clearQuiz, toggleAuthForm } from "../store/actions";
 import { connect } from "react-redux";
 
 class QuizView extends React.PureComponent {
@@ -17,7 +11,6 @@ class QuizView extends React.PureComponent {
   }
 
   render() {
-
     const {
       loggedIn,
       quizzes,

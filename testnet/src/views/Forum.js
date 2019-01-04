@@ -7,6 +7,7 @@ import { getPosts } from "../store/actions/postActions";
 class Forum extends React.PureComponent {
   componentDidMount() {
     this.props.getPosts();
+    window.scrollTo(0, 0);
   }
 
   componentWillReceiveProps(nextProps) {
