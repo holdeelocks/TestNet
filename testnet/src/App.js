@@ -10,10 +10,10 @@ import PostRoutes from "./components/Post/routes";
 import UserView from "./views/UserView";
 
 class App extends React.Component {
-
   // Check local storage for previous login info
   componentDidMount() {
     this.props.checkStatus();
+    window.scrollTo(0, 0);
   }
 
   render() {
@@ -37,8 +37,7 @@ class App extends React.Component {
 
         <PostRoutes user={user} />
 
-        <Route exact path="/user"
-          render={props => (<UserView {...props} />)} />
+        <Route exact path="/user" render={props => <UserView {...props} />} />
       </div>
     );
   }
@@ -48,7 +47,7 @@ export default withRouter(
   connect(
     ({ loginReducer }) => ({
       modal: loginReducer.modal,
-      signInModal: loginReducer.signInModal, 
+      signInModal: loginReducer.signInModal,
       user: loginReducer.user,
       loggedIn: loginReducer.loggedIn,
       loginError: loginReducer.loginError,
