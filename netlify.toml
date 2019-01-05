@@ -1,7 +1,0 @@
-[build]
-
-base = "testnet/"
-
-publish="testnet/build/"
-
-command="yarn build"

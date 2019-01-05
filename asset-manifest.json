@@ -1,0 +1,11 @@
+{
+  "main.js": "/TestNet/static/js/main.8dc7c40d.chunk.js",
+  "main.js.map": "/TestNet/static/js/main.8dc7c40d.chunk.js.map",
+  "static/js/1.2389ef15.chunk.js": "/TestNet/static/js/1.2389ef15.chunk.js",
+  "static/js/1.2389ef15.chunk.js.map": "/TestNet/static/js/1.2389ef15.chunk.js.map",
+  "runtime~main.js": "/TestNet/static/js/runtime~main.9dd26ea9.js",
+  "runtime~main.js.map": "/TestNet/static/js/runtime~main.9dd26ea9.js.map",
+  "index.html": "/TestNet/index.html",
+  "precache-manifest.5aa14f3972d555ecc30f357f2ef72dee.js": "/TestNet/precache-manifest.5aa14f3972d555ecc30f357f2ef72dee.js",
+  "service-worker.js": "/TestNet/service-worker.js"
+}
