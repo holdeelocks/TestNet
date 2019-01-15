@@ -1,7 +1,7 @@
 import React from "react";
-import Review from "./Review";
+import Review from "../PostQuiz/Review";
 import NextButton from "./NextButton";
-import { checkAnswer, getQuestion } from "../../store/actions/quizzActions";
+import { checkAnswer, getQuestion } from "../../../store/actions/quizzActions";
 import QuestionDisplay from "./QuestionDisplay";
 import debounce from "lodash/debounce";
 import { Grid } from "semantic-ui-react";

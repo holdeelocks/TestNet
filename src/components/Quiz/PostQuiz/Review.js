@@ -3,7 +3,7 @@ import Summary from "./Summary";
 import { Button, Form, Grid } from "semantic-ui-react";
 import { Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import { getQuestions } from "../../store/actions/quizzActions";
+import { getQuestions } from "../../../store/actions/quizzActions";
 
 class Review extends React.PureComponent {
   state = {

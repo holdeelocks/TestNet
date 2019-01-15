@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import { Segment, Form, Dropdown, Button } from "semantic-ui-react";
 import { connect } from "react-redux";
 
-import { postQuestion, updateQuestion, deleteQuestion } from "../../store/actions";
+import { postQuestion, updateQuestion, deleteQuestion } from "../../../store/actions";
 
-import LoaderOrError from "../LoaderOrError/LoaderOrError";
+import LoaderOrError from "../../LoaderOrError/LoaderOrError";
 
 class QuestionForm extends Component {
   state = {
@@ -165,7 +165,7 @@ class QuestionForm extends Component {
           error={postingQuestionError}
           errorMsg="Failed to post the question."
           text="Posting"
-      />
+        />
       </Segment>
     );
   }
@@ -175,7 +175,7 @@ export default connect(
   ({ loginReducer, quizzReducer }) => ({
     token: loginReducer.token,
     postingQuestion: quizzReducer.postingQuestion,
-    postingQuestionError: quizzReducer.postingQuestionError,
+    postingQuestionError: quizzReducer.postingQuestionError
   }),
   { postQuestion, updateQuestion, deleteQuestion }
 )(QuestionForm);

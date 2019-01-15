@@ -4,13 +4,13 @@ import { Segment, Header, Button, Grid, Icon, Loader } from "semantic-ui-react";
 import { connect } from "react-redux";
 
 // import helper functions to filter and sort quizzes
-import { filterQuizzes, sortQuizzes } from "../../helper";
+import { filterQuizzes, sortQuizzes } from "../../../helper";
 
 // import action creators from Store
-import { toggleActiveQuizzes, updateSelectedTopics, updateSorting } from "../../store/actions";
+import { toggleActiveQuizzes, updateSelectedTopics, updateSorting } from "../../../store/actions";
 
 // import component
-import ToolBar from "./ToolBar";
+import ToolBar from "../Forms/ToolBar";
 
 class QuizList extends React.Component {
   state = {

@@ -2,7 +2,7 @@ import React from "react";
 import { Header, Form, Grid } from "semantic-ui-react";
 
 import ResultForm from "./ResultForm";
-import Unauthorized from "../Login/Unauthorized";
+import Unauthorized from "../../Login/Unauthorized";
 
 const Summary = ({ questions, answers, rubric, auth, quizId, history }) => {
   if (rubric) {

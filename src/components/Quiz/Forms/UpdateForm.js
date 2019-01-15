@@ -2,17 +2,17 @@ import React, { Component } from "react";
 import { Segment, Header, Form, Button, Divider, Confirm } from "semantic-ui-react";
 import { connect } from "react-redux";
 
-import Unauthorized from "../Login/Unauthorized";
-import LoaderOrError from "../LoaderOrError/LoaderOrError";
+import Unauthorized from "../../Login/Unauthorized";
+import LoaderOrError from "../../LoaderOrError/LoaderOrError";
 import QuestionForm from "./QuestionForm";
 
-import { getQuizz, getQuestions, updateQuizz, deleteQuizz } from "../../store/actions";
+import { getQuizz, getQuestions, updateQuizz, deleteQuizz } from "../../../store/actions";
 
 class UpdateForm extends Component {
   state = {
     title: "",
     topic: "",
-    confirmation: false,
+    confirmation: false
   };
 
   componentDidMount() {
@@ -54,14 +54,29 @@ class UpdateForm extends Component {
     const { match, token, deleteQuizz } = this.props;
     const id = Number(match.params.id);
     deleteQuizz(id, token);
-    this.setState({confirmation: false})
+    this.setState({ confirmation: false });
 
     // history.push("/quizzes");
   };
 
   render() {
     const { title, topic, confirmation } = this.state;
-    const { history, match, quiz, questions, token, user, fetchingQuiz, quizError, updatingQuiz, updateQuizError, deletingQuiz, deleteQuizError, fetchingQuestions, questionsError} = this.props;
+    const {
+      history,
+      match,
+      quiz,
+      questions,
+      token,
+      user,
+      fetchingQuiz,
+      quizError,
+      updatingQuiz,
+      updateQuizError,
+      deletingQuiz,
+      deleteQuizError,
+      fetchingQuestions,
+      questionsError
+    } = this.props;
 
     // user not logged in
     if (!token)
@@ -144,8 +159,18 @@ class UpdateForm extends Component {
 
         {/* Loaders & Error notifications for Quiz fetching, updating, and deleting */}
         <LoaderOrError process={fetchingQuiz} error={quizError} errorMsg="Failed to Fetch Quiz" />
-        <LoaderOrError process={updatingQuiz} error={updateQuizError} errorMsg="Failed to Update Quiz" text="Updating" />
-        <LoaderOrError process={deletingQuiz} error={deleteQuizError} errorMsg="Failed to Delete Quiz" text="Deleting" />
+        <LoaderOrError
+          process={updatingQuiz}
+          error={updateQuizError}
+          errorMsg="Failed to Update Quiz"
+          text="Updating"
+        />
+        <LoaderOrError
+          process={deletingQuiz}
+          error={deleteQuizError}
+          errorMsg="Failed to Delete Quiz"
+          text="Deleting"
+        />
         <Divider />
 
         {/* Confirm Quiz Deletion */}
@@ -164,7 +189,11 @@ class UpdateForm extends Component {
         {/* Update Questions Section */}
         <Header as="h2" content="Update Question" />
         {/* Loader and Error handler for fetching questions */}
-        <LoaderOrError process={fetchingQuestions} error={questionsError} errorMsg="Failed to Fetch Questions"/>
+        <LoaderOrError
+          process={fetchingQuestions}
+          error={questionsError}
+          errorMsg="Failed to Fetch Questions"
+        />
         {/* No Question added */}
         {!questionsError && questions.length === 0 && (
           <Segment textAlign="center" content="No questions have been added." />
@@ -172,7 +201,6 @@ class UpdateForm extends Component {
         {questions.map(question => (
           <QuestionForm key={question.id} question={question} history={history} match={match} />
         ))}
-
       </Segment>
     );
   }
@@ -192,7 +220,7 @@ export default connect(
     updateQuizError: quizzReducer.updateQuizError,
     deleteQuizError: quizzReducer.deleteQuizError,
     quizDeleted: quizzReducer.quizDeleted,
-    questionsError: quizzReducer.questionsError,
+    questionsError: quizzReducer.questionsError
   }),
   { getQuizz, updateQuizz, deleteQuizz, getQuestions }
 )(UpdateForm);

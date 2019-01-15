@@ -1,9 +1,9 @@
 import React from "react";
 import { Segment, Input, Dropdown, Button, Checkbox } from "semantic-ui-react";
 import PropTypes from "prop-types";
-import _ from 'lodash';
+import _ from "lodash";
 
-import SignInButton from "../Login/SignInButton";
+import SignInButton from "../../Login/SignInButton";
 
 const ToolBar = ({
   history,
@@ -145,7 +145,7 @@ ToolBar.propTypes = {
   activeOnly: PropTypes.bool.isRequired,
   updateSorting: PropTypes.func.isRequired,
   sortingMethod: PropTypes.string.isRequired,
-  quizzes: PropTypes.array.isRequired,
+  quizzes: PropTypes.array.isRequired
 };
 
 export default ToolBar;

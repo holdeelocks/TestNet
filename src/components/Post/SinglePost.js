@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import moment from "moment";
-import { getPost } from "../../store/actions/postActions";
 import { Header, Container, Divider, Button, Segment } from "semantic-ui-react";
+
+import { getPost } from "../../store/actions/postActions";
+
+// const SinglePost = props => {
+//   return(
+//     <div>
+//       <p>brap</p>
+//     </div>
+//   )
+// }
 
 class SinglePost extends React.Component {
   componentDidMount() {

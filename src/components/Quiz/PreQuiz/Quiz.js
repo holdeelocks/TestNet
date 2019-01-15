@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Button, Image, Segment, Icon, Loader } from "semantic-ui-react";
 import { connect } from "react-redux";
-import { getQuizz, getQuestions } from "../../store/actions/quizzActions";
+import { getQuizz, getQuestions } from "../../../store/actions/quizzActions";
 
 class Quiz extends React.Component {
   componentDidMount() {

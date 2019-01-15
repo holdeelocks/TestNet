@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Header, Icon } from "semantic-ui-react";
-import VoicePlayer from "../VoiceLibrary/VoicePlayer";
+import VoicePlayer from "../../VoiceLibrary/VoicePlayer";
 
 const QuestionDisplay = ({ play, playVoice, stopVoice, question, change, current, questionId }) => {
   return (
@@ -16,7 +16,7 @@ const QuestionDisplay = ({ play, playVoice, stopVoice, question, change, current
         <Icon style={{ cursor: "pointer" }} onClick={playVoice} className="volume up" />
         {` ${question.question}`}
       </Header>
-      {question.options.map((option) => (
+      {question.options.map(option => (
         <Form.Radio
           key={option[0]}
           label={option[1]}

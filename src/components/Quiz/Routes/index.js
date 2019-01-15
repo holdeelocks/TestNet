@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 import { Route } from "react-router-dom";
 import Welcome from "../../Welcome";
-import QuizList from "../QuizList";
-import Quiz from "../Quiz";
-import QuestionPage from "../QuestionPage";
-import QuizForm from "../QuizForm";
-import UpdateForm from "../UpdateForm";
+import QuizList from "../PreQuiz/QuizList";
+import Quiz from "../PreQuiz/Quiz";
+import QuestionPage from "../DuringQuiz/QuestionPage";
+import QuizForm from "../Forms/QuizForm";
+import UpdateForm from "../Forms/UpdateForm";
 
 const QuizRoutes = ({ quizzes, topics, loggedIn, user, clearQuiz, fetchingQuizzes }) => {
   return (

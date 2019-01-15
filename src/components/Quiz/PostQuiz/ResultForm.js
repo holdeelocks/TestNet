@@ -2,7 +2,7 @@ import React from "react";
 import { Segment, Button, Grid } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { userResults } from "../../store/actions";
+import { userResults } from "../../../store/actions";
 
 class ResultForm extends React.Component {
   state = {
