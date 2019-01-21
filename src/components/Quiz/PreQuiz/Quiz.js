@@ -38,7 +38,7 @@ class Quiz extends React.Component {
         <Button
           basic
           disabled={questions.length > 0 ? false : true}
-          content="Begin Quiz"
+          content="Start Quiz"
           floated="right"
           color="green"
           onClick={() => history.push(`/quizzes/${id}/${firstQuestion.id}`)}

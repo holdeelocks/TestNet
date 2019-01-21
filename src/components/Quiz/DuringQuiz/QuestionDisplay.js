@@ -14,7 +14,7 @@ const QuestionDisplay = ({ play, playVoice, stopVoice, question, change, current
       )}
       <Header as="h3" style={{ margin: "2.5rem 0" }}>
         <Icon style={{ cursor: "pointer" }} onClick={playVoice} className="volume up" />
-        {` ${question.question}`}
+        {`${question.question}`}
       </Header>
       {question.options.map(option => (
         <Form.Radio
